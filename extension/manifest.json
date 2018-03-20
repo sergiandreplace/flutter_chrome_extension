@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Flutter developer extension",
+  "description": "A set of tools to help you develop on Flutter.",
+  "version": "1.0",
+  "icons": {
+    "192":"flutter.png"
+  },
+  "omnibox": { "keyword" : "fl" },
+  "permissions": [
+    "https://docs.flutter.io/"
+  ],
+  "background": {
+    "scripts": ["omnibox.js"],
+    "persistent": false
+
+  },
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["urlmatcher.js", "sourcebutton.js"],
+    "matches": ["https://docs.flutter.io/*"]
+  }]
+ 
+}
