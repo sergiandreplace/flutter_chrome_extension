@@ -1,4 +1,3 @@
-console.log("hola");
 
 let getFilename = function () {
   return document.URL.split('#').shift().split('?').shift().split('/').pop().replace(".html", "");

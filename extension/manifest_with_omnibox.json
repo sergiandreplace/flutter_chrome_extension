@@ -7,9 +7,15 @@
   "icons": {
     "192":"logo_192.png"
   },
+  "omnibox": { "keyword" : "fl" },
   "permissions": [
     "https://docs.flutter.io/*"
   ],
+  "background": {
+    "scripts": ["omnibox.js"],
+    "persistent": true
+
+  },
   "content_scripts": [{
     "css": ["styles.css"],
     "js": ["urlmatcher.js", "sourcebutton.js"],
