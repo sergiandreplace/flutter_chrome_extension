@@ -1,3 +1,5 @@
 language: bash
 before_script:
   - bash buildlinks.sh
+  - cd extension
+  - zip extension.zip
