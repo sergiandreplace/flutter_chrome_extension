@@ -1,2 +1,3 @@
+language: bash
 before_script:
-  - ./buildlinks.sh
+  - bash buildlinks.sh
