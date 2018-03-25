@@ -39,8 +39,8 @@ echo '### Building urls ###'
 
 folder=./flutter_temp/packages/flutter/lib/src
 
-grep -R -n "^ *class [A-Z]" $folder |
-$SED -E 's|class\s(\S*)\s.*|\1|g; s|^./flutter_temp/packages/flutter/lib/src/([^:]*):([^:]*):([^:]*)$|    "\3": "\1#L\2",|gm;  s|(<[A-Z]+?>)||g' |
+grep -E -R -n "^(abstract)* *class [A-Z]" $folder |
+$SED -E 's|(abstract)* *class\s(\S*)\s.*|\2|g; s|^./flutter_temp/packages/flutter/lib/src/([^:]*):([^:]*):([^:]*)$|    "\3": "\1#L\2",|gm;  s|(<[A-Z]+?>)||g' |
 sort |
 head -c -2 > urls.json
 

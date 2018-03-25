@@ -10,6 +10,7 @@
   "permissions": [
     "https://docs.flutter.io/*"
   ],
+
   "content_scripts": [{
     "css": ["styles.css"],
     "js": ["urlmatcher.js", "sourcebutton.js"],
